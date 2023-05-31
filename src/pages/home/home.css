@@ -252,3 +252,81 @@ footer {
   background: transparent;
   border-color: var(--color-gray-100);
 }
+.footer_copyright{
+  color: var(--color-gray-100);
+  text-align: center;
+  padding: 1.5rem 0 ;
+  border: 2px solid var(--color-primary-varient);
+  margin-top: 5rem;
+}
+
+
+
+
+
+/* ====================== media quries ======================= */
+ 
+@media screen and  (max-width: 1024px) {
+
+  /* header  */
+
+  .main_header{
+    height: fit-content;
+    padding: 12rem 0;
+  }
+  
+  .main_header_container{
+    gap: 0 ;
+
+  }
+  .main_header-circle{
+    width: 16rem;
+    height: 16rem;
+  }
+
+
+  /* header  */
+
+
+  .programs_wrapper{
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+
+
+  /* values */
+
+  .values_container{
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .values_wrapper{
+    gap: 4rem 3rem;
+  }
+
+  .values_image{
+    display: none;
+  }
+
+  /* FAQs */
+
+  .faqs_wrapper{
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials */
+
+  .testimonials{
+    width: 75%;
+  }
+
+  /* footer  */
+
+  .footer_container{
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
