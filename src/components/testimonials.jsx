@@ -12,11 +12,31 @@ const Testimonials = () => {
   const [index, SetIndex] = useState(1);
   const { name, quote, job, avatar } = testimonials[index];
 
+  const prevTestimonialsHandler = () => {
+    SetIndex((prev) => prev - 1);
+    
+    if (index <= 0) {
+      SetIndex(testimonials.length - 1);
+    }
+  };
+
+  const nextTestimonialsHandler = () => {
+    SetIndex((prev) => prev + 1);
+
+    if (index >= testimonials.length - 1) {
+      SetIndex(0);
+    }
+  };
+
   return (
     <div>
       <section className="testimonials">
         <div className="container testimonials_container">
-          <SectionHead icon={<ImQuotesLeft />} title="Testimonials" className='testimonials_head'/>
+          <SectionHead
+            icon={<ImQuotesLeft />}
+            title="Testimonials"
+            className="testimonials_head"
+          />
           <Card className="testimonial">
             <div className="testimonial_avatar">
               <img src={avatar} alt={name} />
@@ -26,9 +46,18 @@ const Testimonials = () => {
             <small className="testimonial_title">{job}</small>
           </Card>
           <div className="testimonials_btn-container">
-            <button className="testimonials_btn"><IoIosArrowDropleftCircle/></button>
-            <button className="testimonials_btn"><IoIosArrowDroprightCircle/></button>
-
+            <button
+              className="testimonials_btn"
+              onClick={prevTestimonialsHandler}
+            >
+              <IoIosArrowDropleftCircle />
+            </button>
+            <button
+              className="testimonials_btn"
+              onClick={nextTestimonialsHandler}
+            >
+              <IoIosArrowDroprightCircle />
+            </button>
           </div>
         </div>
       </section>

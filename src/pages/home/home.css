@@ -119,43 +119,40 @@
   cursor: pointer;
 }
 
-.faq div{
+.faq div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.faq_icon{
-background: transparent;
-color: var(--color-gray-100);
-font-size: 1.5rem;
+.faq_icon {
+  background: transparent;
+  color: var(--color-gray-100);
+  font-size: 1.5rem;
 }
 
-.faq p{
+.faq p {
   margin-top: 1.5rem;
 }
 
+/* ============= .testimonials ======================= */
 
-
-
-/* ============= faqs ======================= */
-
-.testimonials{
+.testimonials {
   width: 50rem;
   margin-inline: auto;
 }
 
-.testimonials_head{
+.testimonials_head {
   justify-content: center;
 }
 
-.card.testimonial{
+.card.testimonial {
   position: relative;
   text-align: left;
   margin-top: 5rem;
 }
 
-.testimonial_avatar{
+.testimonial_avatar {
   width: 4rem;
   height: 4rem;
   border-radius: 1.5rem;
@@ -167,24 +164,91 @@ font-size: 1.5rem;
   transition: var(--transition);
 }
 
-.testimonial:hover .testimonial_avatar{
+.testimonial:hover .testimonial_avatar {
   border-radius: 50%;
   border-color: var(--color-gray-400);
 }
 
-.testimonial_quote{
+.testimonial_quote {
   font-style: italic;
-  margin: 1rem 0 2rem ;
+  margin: 1rem 0 2rem;
 }
 
-.card small.testimonial_title{
+.card small.testimonial_title {
   margin-top: 0.3rem;
 }
-.testimonial_btn-container{
+.testimonial_btn-container {
   width: fit-content;
   margin: 2.5rem auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+.testimonials_btn {
+  background: transparent;
+  cursor: pointer;
+}
+.testimonials_btn svg {
+  fill: var(--color-primary);
+  font-size: 1.8rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+/* ============= footer ======================= */
+
+footer {
+  background: var(--color-primary);
+  margin-top: 7rem;
+  padding-top: 7rem;
+  font-size: 0.9rem;
+  color: var(--color-gray-100);
+}
+
+.footer_container {
+  display: grid;
+  grid-template-columns: 26rem 1fr 1fr 1fr;
+  gap: 5rem;
+}
+
+.footer_container article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.footer_container article p {
+  margin-top: 0.5rem;
+}
+.footer_container article h4 {
+  margin-top: 0.6rem;
+  font-size: 1.3rem;
+}
+
+.footer_socials {
+  margin-top: 1.3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer_socials a {
+  background: var(--color-gray-100);
+  padding: 0.7rem;
+  
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  transition: var(--transition);
+}
+
+.footer_socials a svg{
+  color: var(--color-gray-600);
+
+}
+
+.footer_socials a:hover{
+  background: transparent;
+  border-color: var(--color-gray-100);
 }
